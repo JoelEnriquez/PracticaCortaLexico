@@ -18,19 +18,19 @@ namespace PracticaCorta
             this.palabraIngresada = palabraIngresada;
         }
 
-        public String[] AnalizarExpresion()
+        public void AnalizarExpresion()
         {
             string[] tokens = palabraIngresada.Split(' ');
             int aux = 0;
             tipoComponente = new String[tokens.Length]; /*El arreglo de tokens nos da el arreglo para poner que tipo
             de componente indicado por un String*/
 
+            //Hasta que el aux sea menor que el tamaño de array se va a ejecutar         
             while (aux<tokens.Length)
             {
                 verificarTexto(tokens[aux],aux);
                 aux++;
             }
-            return null;
         }
 
         private void verificarTexto(String lexema,int indiceAux)
@@ -61,7 +61,7 @@ namespace PracticaCorta
         {
             for (int i = 0; i < token.Length; i++)
             {
-                if (!Char.IsLetter(token[i]))
+                if (!Char.IsLetter(token[i])) //Si encuentra un char diferente a letra devuelve false
                 {
                     return false;
                 }
@@ -73,7 +73,7 @@ namespace PracticaCorta
         {
             for (int i = 0; i < token.Length; i++)
             {
-                if (!Char.IsDigit(token[i]))
+                if (!Char.IsDigit(token[i]))//Si encuentra un char diferente a decimal devuelve false
                 {
                     return false;
                 }
@@ -82,7 +82,7 @@ namespace PracticaCorta
         }
 
         private Boolean esDecimal(String token)
-        {
+        { 
             for (int i = 0; i < token.Length; i++)
             {
                 if (token[i].Equals('.'))
@@ -90,13 +90,20 @@ namespace PracticaCorta
                     String[] numeros = token.Split('.');
                     for (int j = 0; j < numeros.Length; j++)
                     {
-                        if (!esEntero(numeros[j]))
+                        if (numeros[j].Equals("")) //Comprueba que no venga vacio cuando se hace la particion
                         {
                             return false;
                         }
+                        else
+                        {
+                            if (!esEntero(numeros[j])) //Se usa la funcion de entero para ver si ambas partas tienen numero
+                            {
+                                return false;
+                            }
+                        }                      
                     }
                     return true;
-                }
+                }        
             }
             return false;
         }
@@ -106,7 +113,7 @@ namespace PracticaCorta
             if (token[0].Equals('Q'))
             {
                 String numeros = token.Substring(1);
-                if (esEntero(numeros)||esDecimal(numeros))
+                if (esEntero(numeros)||esDecimal(numeros)) //Si una de las dos cumple, significa que es moneda
                 {
                     return true;
                 }
