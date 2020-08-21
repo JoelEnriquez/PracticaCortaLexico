@@ -27,16 +27,96 @@ namespace PracticaCorta
 
             while (aux<tokens.Length)
             {
-                verificarTexto(tokens[aux]);
+                verificarTexto(tokens[aux],aux);
                 aux++;
             }
             return null;
         }
 
-        private void verificarTexto(String lexema)
+        private void verificarTexto(String lexema,int indiceAux)
         {
+            if (esPalabra(lexema))
+            {
+                tipoComponente[indiceAux] = "Palabra";
+            }
+            else if (esEntero(lexema))
+            {
+                tipoComponente[indiceAux] = "Numero";
+            }
+            else if (esDecimal(lexema))
+            {
+                tipoComponente[indiceAux] = "Decimal";
+            }
+            else if (esMoneda(lexema))
+            {
+                tipoComponente[indiceAux] = "Moneda";
+            }
+            else
+            {
+                tipoComponente[indiceAux] = "Token Erroneo";
+            }
+        }
 
-            
+        private Boolean esPalabra(String token)
+        {
+            for (int i = 0; i < token.Length; i++)
+            {
+                if (!Char.IsLetter(token[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private Boolean esEntero(String token)
+        {
+            for (int i = 0; i < token.Length; i++)
+            {
+                if (!Char.IsDigit(token[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private Boolean esDecimal(String token)
+        {
+            for (int i = 0; i < token.Length; i++)
+            {
+                if (token[i].Equals('.'))
+                {
+                    String[] numeros = token.Split('.');
+                    for (int j = 0; j < numeros.Length; j++)
+                    {
+                        if (!esEntero(numeros[j]))
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private Boolean esMoneda(String token)
+        {
+            if (token[0].Equals('Q'))
+            {
+                String numeros = token.Substring(1);
+                if (esEntero(numeros)||esDecimal(numeros))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public String[] getTipoComponentes()
+        {
+            return tipoComponente;
         }
 
         

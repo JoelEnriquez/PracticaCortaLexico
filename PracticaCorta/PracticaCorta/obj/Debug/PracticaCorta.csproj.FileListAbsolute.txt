@@ -1,0 +1,15 @@
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csprojAssemblyReference.cache
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\MainWindow.g.cs
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\App.g.cs
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta_MarkupCompile.cache
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta_MarkupCompile.lref
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.exe.config
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.exe
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\bin\Debug\PracticaCorta.pdb
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\MainWindow.baml
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.g.resources
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.Properties.Resources.resources
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csproj.GenerateResource.cache
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.csproj.CoreCompileInputs.cache
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.exe
+C:\Users\asus\Documents\Proyectos\Lenguajes Formales\PracticaCortaLexico\PracticaCorta\PracticaCorta\obj\Debug\PracticaCorta.pdb

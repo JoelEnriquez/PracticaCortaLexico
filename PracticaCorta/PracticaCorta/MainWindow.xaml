@@ -7,20 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Ingreso Texto" HorizontalAlignment="Left" Margin="108,113,0,0" VerticalAlignment="Top" FontSize="24" Width="159"/>
+        <Label x:Name="txtIngresoTexto" Content="Ingreso Texto" HorizontalAlignment="Left" Margin="94,123,0,0" VerticalAlignment="Top" FontSize="24" Width="159"/>
         <TextBox x:Name="tbIngresoOracion" HorizontalAlignment="Left" Height="45" Margin="42,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" FontSize="20" TextAlignment="Center"/>
-        <Button Content="Analizar" HorizontalAlignment="Left" Margin="108,276,0,0" VerticalAlignment="Top" Width="159" Height="50" FontSize="22" Click="Button_Click"/>
-        <ListView HorizontalAlignment="Left" Margin="376,61,0,64" Width="345" RenderTransformOrigin="0.506,0.506" SelectionChanged="ListView_SelectionChanged">
-            <ListView.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.19"/>
-                    <TranslateTransform X="-0.006" Y="0.008"/>
-                </TransformGroup>
-            </ListView.RenderTransform>
+        <Button x:Name="buttonAnalizar" Content="Analizar" HorizontalAlignment="Left" Margin="94,268,0,0" VerticalAlignment="Top" Width="159" Height="50" FontSize="22" Click="Button_Click"/>
+        <ListView x:Name="listaComponentesListView" HorizontalAlignment="Left" Margin="418,61,0,47" Width="311" AutomationProperties.IsColumnHeader="True">
             <ListView.View>
-                <GridView/>
+                <GridView>
+                    <GridViewColumn Header="Tokens" Width="140" DisplayMemberBinding="{Binding Tokens}" />
+                    <GridViewColumn Header="Tipo" Width="175" DisplayMemberBinding="{Binding Tipo}" />
+                </GridView>
             </ListView.View>
         </ListView>
 
